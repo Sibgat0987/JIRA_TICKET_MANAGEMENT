@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JIRA TICKET MANAGEMENT</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  </link>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="jira.css" />
+  </head>
+  <body>
+    <div class="blue-header">
+      <div class="header-box1">
+        <div class="lightpink color"></div>
+        <div class="lightblue color"></div>
+        <div class="lightgreen color"></div>
+        <div class="black color"></div>
+      </div>
+      <div class="header-box2">
+        <div class="add-btn"><i class="fas fa-plus"></i></div>
+        <div class="remove-btn"><i class="fas fa-times"></i></div>
+      </div>
+    </div>
+<!--tickets container-->
+<div class="main-cont">
+  <div class="ticket-cont">
+    <div class="ticket-color"></div>
+    <div class="ticket-id">#Ticket Id</div>
+    <div class="task-content">Hey this is task</div>
+    <div class="ticket-lock">
+      <i class="fa fa-lock" aria-hidden="true"></i>
+    </div>
+</div>
+<div class="write-cont">
+  <textarea spellcheck="false" class="text-box"></textarea>
+  <div class="ticket-priority-color">
+    <div class="lightpink priority-color"></div>
+    <div class="lightblue priority-color"></div>
+    <div class="lightgreen priority-color"></div>
+    <div class="black priority-color border"></div>
+   
+</div>
+<script src="https://unpkg.com/shortid-dist@1.0.5/dist/shortid-2.2.13.min.js"></script>
+<script src="jira.js"></script>
+  </body>
+</html>
