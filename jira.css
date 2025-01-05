@@ -9,6 +9,8 @@ body{
   justify-content: center;
   align-items: center;
   border-radius: 3px;
+  z-index: 1000;
+
 }
 .header-box1{
   background-color:  #3d3d3d;
@@ -18,6 +20,8 @@ body{
   padding: 1rem;
   margin: 1rem;
   border-radius: 3px;
+  z-index: 1000;
+
 } 
 .header-box1>*{
   border-radius: 3px;
@@ -33,6 +37,8 @@ body{
   color: white;
   padding: 0.25rem;
   font-size: 2rem;
+  z-index: 1000;
+
 }
 .header-box2>*:hover{
 background-color: #485460;
@@ -153,4 +159,65 @@ border-radius: 3px;
   padding-right: 10px;
   font-size: 1.5rem;
 
+}
+@media screen and (max-width: 480px) {
+  .blue-header{
+    z-index: 1;
+  }
+  .main-cont {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    gap: 50px;
+  }
+
+  .ticket-cont {
+    width: 90vw;
+  }
+
+  .ticket-lock {
+    font-size: 1rem;
+  }
+
+  .action-btn {
+    width: 4rem;
+    font-size: 1rem;
+    margin-right: 1rem;
+    padding: 1%;
+  }
+
+  .action-btn>* {
+    margin: 1%;
+  }
+
+  .write-cont {
+    height: 40vh;
+    width: 80vw;
+  }
+  .priority-color {
+    width: 2rem;
+    height: 1rem;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 769px) {
+  .main-cont {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .write-cont {
+    height: 40vh;
+    width: 60vw;
+  }
+
+  .priority-color {
+    width: 3rem;
+    height: 2rem;
+  }
+
+  .ticket-cont {
+    width: 45vw;
+  }
 }
