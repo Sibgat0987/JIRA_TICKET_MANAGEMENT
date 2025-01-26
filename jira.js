@@ -12,11 +12,7 @@ var toolbox_colors = document.querySelectorAll(".color");
 var allColors = [];
 var allTickets = [];
 
-console.log("earlier : " + typeof(allColors));
-console.log(toolbox_colors);
 
-console.log("localstorage ke items hai");
-console.log(localStorage.getItem("jira-items"));
 if (localStorage.getItem("jira-items")) {
     allColors = JSON.parse(localStorage.getItem("jira-items"));
     allColors.forEach(color => {
@@ -41,7 +37,6 @@ toolbox_colors.forEach(colorElement => {
 toolbox_colors.forEach(colorElement => {
     colorElement.addEventListener("contextmenu", (e) => {
         e.preventDefault();
-        console.log("context menu called");
         allTickets.forEach(ticket => ticket.remove());
         allColors.forEach(ticket => {
             createTicket(ticket.ticketColor, ticket.ticketContent, ticket.ticketId);
@@ -58,7 +53,6 @@ removebtn.addEventListener("click", () => {
 var lock = "fa-lock";
 var unlock = "fa-lock-open";
 
-// Adding borders on color block while clicking on them
 priority_colors.forEach(element => {
     element.addEventListener("click", () => {
         priority_colors.forEach(color => color.classList.remove("border"));
@@ -77,10 +71,9 @@ addbtn.addEventListener("click", () => {
 
 // Closing a modal on pressing shift button
 modal.addEventListener("keydown", (e) => {
-    console.log("modal click listener called");
     console.log(e.key);
     if (e.key == "Shift") {
-        console.log("shift hai");
+        console.log("shift");
         createTicket(modalPriorityColor, textbox.value);
         toggleAdd = false;
         setModalToDefault();
