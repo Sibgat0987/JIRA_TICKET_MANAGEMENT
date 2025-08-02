@@ -20,7 +20,7 @@ if (localStorage.getItem("jira-items")) {
     });
 }
 
-// On left click show filtered items
+// On  clicking colors in toolbox get  filtered items
 toolbox_colors.forEach(colorElement => {
     var color = colorElement.classList[0];
     colorElement.addEventListener("click", () => {
@@ -35,8 +35,10 @@ toolbox_colors.forEach(colorElement => {
 
 // On right click show all elements
 toolbox_colors.forEach(colorElement => {
-    colorElement.addEventListener("contextmenu", (e) => {
+    colorElement.addEventListener("dblclick", (e) => {
         e.preventDefault();
+          console.log("Right click detected!");
+
         allTickets.forEach(ticket => ticket.remove());
         allColors.forEach(ticket => {
             createTicket(ticket.ticketColor, ticket.ticketContent, ticket.ticketId);
@@ -141,7 +143,7 @@ function handleTicketLock(ticket, ticketId) {
         }
     });
 }
-
+//click one tthe color bar once ur task is doe change its priority color now
 function handleTicketColor(ticket, ticketId) {
     var ticketColor = ticket.querySelector(".ticket-color");
     ticketColor.addEventListener("click", () => {
